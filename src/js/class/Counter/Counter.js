@@ -1,6 +1,6 @@
 class Counter {
     constructor(id) {
-        //this.text = document.getElementById(id);
+       // this.text = document.getElementById(id);
         this.counter = 0;
     }
 
@@ -11,13 +11,13 @@ class Counter {
 
     increaseCounter() {
         this.counter += 1;
-        //this.updateText();
+       // this.updateText();
         return this.counter
     }
 
     decreaseCounter() {
         this.counter -= 1;
-        this.updateText();
+        //this.updateText();
     }
 
     updateText() {

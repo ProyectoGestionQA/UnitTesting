@@ -27,7 +27,7 @@ export default class Box {
          */
         this.onBoxClick = () => onBoxClick(posX, posY);
 
-        this.box.addEventListener("mousedown", this.handleBoxClick.bind(this));
+       this.box.addEventListener("mousedown", this.handleBoxClick.bind(this));
     }
 
     handleBoxClick() {
@@ -58,12 +58,14 @@ export default class Box {
 
         if (idx === 0) {
             this.isCanChangeShape = false;
-            this.box.className = `${globalData.classList.box.box} ${globalData.classList.box.boxHide}`;
+           this.box.className = `${globalData.classList.box.box} ${globalData.classList.box.boxHide}`;
             this.child.className = `${globalData.classList.box.childBox} ${globalData.classList.box.childBoxHide}`;
+            return this.isCanChangeShape;
         } else if (idx === 1) {
             this.isFilled = true;
             this.box.className = globalData.classList.box.box;
             this.child.className = globalData.classList.box.childBox;
+            return this.isFilled;
         } else {
             this.box.className = globalData.classList.box.box;
             this.child.className = `${globalData.classList.box.childBox} ${globalData.classList.box.childBoxDot}`;

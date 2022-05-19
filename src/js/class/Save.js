@@ -9,14 +9,17 @@ class Save {
 
     setMaxLevel(maxLevel) {
         this.maxLevel = maxLevel > this.maxLevel ? maxLevel : this.maxLevel;
+        return this.maxLevel;
     }
 
     setMaxClick(maxClick) {
         this.maxClick = maxClick > this.maxClick ? maxClick : this.maxClick;
+        return this.maxClick;
     }
 
     setIsGameComplete(isGameComplete) {
         this.isGameComplete = isGameComplete;
+        return this.isGameComplete;
     }
 
     isCanClickNext(currentLevel) {
